@@ -5,8 +5,8 @@ phases:
     commands:
       - echo Logging in to AWS ECR
       - aws --version
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 767397873777.dkr.ecr.us-east-1.amazonaws.com
-      - REPOSITORY_URI=
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 471112996721.dkr.ecr.us-east-1.amazonaws.com
+      - REPOSITORY_URI=471112996721.dkr.ecr.us-east-1.amazonaws.com/cloud-frontend
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   install:
     runtime-versions:
@@ -32,7 +32,7 @@ phases:
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image defination file...
       # Give your container a name
-      - DOCKER_CONTAINER_NAME=vw-project-cloud-container
+      - DOCKER_CONTAINER_NAME=backend-container
       - printf '[{"name":"%s","imageUri":"%s"}]' $DOCKER_CONTAINER_NAME $REPOSITORY_URI:$IMAGE_TAG > imagedefinations.json
       - echo printing imagedefinations.json
       - cat imagedefinations.json
