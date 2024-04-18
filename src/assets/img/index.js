@@ -1,0 +1,10 @@
+import signupformImg from "./signupform.avif"
+import loginformImg from "./loginform.jpg"
+import dashboardPoster from "./dashboardPoster.webp"
+import parentHome from "./parentHome.avif"
+import img2_dash from "./img2_dash.jpeg"
+import img1_dash from "./img1_dash.jpeg"
+import img3_dash from "./img3_dash.jpeg"
+import img4_dash from "./img4_dash.jpeg"
+import news_img from "./news_.jpeg"
+export {signupformImg,loginformImg,dashboardPoster,parentHome,img2_dash,img1_dash,img3_dash,news_img,img4_dash}
